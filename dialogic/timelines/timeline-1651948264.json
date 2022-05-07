@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Die Straße in die Große Stadt war fast leer. Scheinbar wollte niemand da rein. Aus der Stadt raus allerdings staute sich der Verkehr. Als würde das viele Hupen irgendetwas beschleunigen.\nWir kamen an eine Straßensperre. \nEin Soldat hob die Hand und machte einen langsamen Schritt auf die Fahrbahn.\n \"Wohin?\" fragte er knapp.\n\"Wir wollen in die Stadt. Zum Bahnhof\" erwiderte ich und gab ihm unsere Pässe.\n\"Ausreisen, hmm?\" er überflog die Dokumente.\n\"Ok, weiterfahren. Aber Ihren Mann da werden die wohl kaum gehen lassen. Außer er ist ein Krüppel.\" Ein andere Soldat hinter ihm lachte. \nWir fuhren weiter."
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651948264.json",
+		"name": "StadtKontrolle"
+	}
+}

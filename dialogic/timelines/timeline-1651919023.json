@@ -8,7 +8,13 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Das waren harte monate. "
+			"text": "Irgendwann im Außenbezirk einer kleinen Stadt"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Es war sehr früh am Morgen. Noch klang es so als wären die Einschlage weit weg, aber ich konnte nicht mit Sicherheit sagen wie weit weg. Die Rucksäcke mit dem Nötigsten hatten wir schon vor Wochen gepackt. "
 		},
 		{
 			"character": "",
@@ -20,7 +26,7 @@
 			"question": "Solen wir fliehen?"
 		},
 		{
-			"choice": "Ja!",
+			"choice": "Ja! Wir nehmen die Treppe!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -28,34 +34,39 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Sollen wir noch mal zur Bank"
+			"text": "Wir rannten so schnell wir konnten. Ein endloses Stockwerk nach dem anderen. Unsere Tochter die noch zu klein war auf dem Arm meines Mannes. Eine niemals enden wollenden Stiege nach der anderen."
 		},
 		{
-			"choice": "Ja lass uns zur Bank gehen",
+			"choice": "Schnell zum Fahrstuhl!!!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"definition": "1651921238-648",
-			"event_id": "dialogic_014",
-			"operation": "+",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "100"
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ich rannte mit meiner Tochter auf dem Arm los. Mein Mann hinter mir.  Wir stiegen in den Fahrstuhl und führen ins Erdgeschoss."
 		},
 		{
-			"choice": "Nein",
+			"choice": "Wir bleiben!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir schraken immer wieder hoch, blieben aber am Küchentisch sitzen. Dann passierte nichts. Ich hielt den Atem an. Eine Ewigkeit in Stille verging. Ich hörte mein Herz so laut schlagen. Plötzlich eine Kraft die mich vom Stuhl riss und ich sah  das geborstene Glas in tausend Splitter durch die Luft  fliegen..."
+		},
+		{
+			"change_scene": "res://GameOver.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -64,23 +75,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okay, lass uns gehen!"
-		},
-		{
-			"choice": "Niemals",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Wir machen uns auf den weg mit so viel geld:"
+			"text": "Unten angekommen rannten wir zu unserem Auto, als plötzlich etwas in unser Haus einschlug. Wir drehten uns nicht um. Im Rückspiegel sah ich, wie da wo zuvor noch unsere Wohnung war, nun ein schwarzes Loch klaffte. Wir fuhren so schnell wir konnten."
 		},
 		{
 			"emit_signal": "EndDialog",
