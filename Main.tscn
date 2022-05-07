@@ -11,16 +11,10 @@
 [node name="Map" parent="Spielwelt" instance=ExtResource( 1 )]
 
 [node name="Player" parent="Spielwelt" instance=ExtResource( 2 )]
-<<<<<<< HEAD
-position = Vector2( 6117, 7246 )
-=======
-position = Vector2( 4094, 2697 )
-speed = 150
->>>>>>> origin/main
-friction = 0.1
+position = Vector2( 2086, 7253 )
 
-[node name="Other" type="Node" parent="."]
+[node name="Sonstiges" type="Node" parent="."]
 
-[node name="Music" type="AudioStreamPlayer" parent="Other"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sonstiges"]
 stream = ExtResource( 3 )
 autoplay = true
