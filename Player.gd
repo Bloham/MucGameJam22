@@ -17,7 +17,7 @@ onready var animated_sprite: AnimatedSprite = $AnimatedSprite
 
 func _physics_process(_delta: float) -> void:
 	# Once again, we call `Input.get_action_strength()` to support analog movement.
-	var direction := Vector2(
+	var direction_input := Vector2(
 		# This first line calculates the X direction, the vector's first component.
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		# And here, we calculate the Y direction. Note that the Y-axis points 
@@ -25,18 +25,21 @@ func _physics_process(_delta: float) -> void:
 		# That is to say, a Y value of `1.0` points downward.
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	)
-	# When aiming the joystick diagonally, the direction vector can have a length 
-	# greater than 1.0, making the character move faster than our maximum expected
-	# speed. When that happens, we limit the vector's length to ensure the player 
-	# can't go beyond the maximum speed.
-	if direction.length() > 1.0:
-		direction = direction.normalized()
+	direction_input = direction_input.normalized()
 		
-	var target_velocity = direction * speed
+	var direction_path = get_path_direction(direction_input)
+		
+	var target_velocity = direction_path * speed
 	_velocity += (target_velocity - _velocity) * friction
 	_velocity = move_and_slide(_velocity)
 	
 	#move_and_slide(speed * direction)
+
+
+func get_path_direction(direction_input):
+	var diretion_final = direction_input
+	
+	return diretion_final
 
 
 # The code below updates the character's sprite to look in a specific direction.
