@@ -20,9 +20,10 @@ func dialog_listener(string):
 			player.dialogPlaying(true)
 			pass
 		
-		#"ContinueDialog":
-			#print("Dialog wir nicht geklöscht")
-			#player.dialogPlaying()
+		"ContinueDialog":
+			print("Dialog wir nicht gelöscht")
+			player.dialogPlaying(false)
+			pass
 		
 		"EndDialog":
 			print("Dialog beendet")
