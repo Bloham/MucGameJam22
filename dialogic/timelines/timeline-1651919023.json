@@ -75,7 +75,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Unten angekommen rannten wir zu unserem Auto, als plötzlich etwas in unser Haus einschlug. Wir drehten uns nicht um. Im Rückspiegel sah ich, wie da wo zuvor noch unsere Wohnung war, nun ein schwarzes Loch klaffte. Wir fuhren so schnell wir konnten."
+			"text": "Unten angekommen rannten wir zu unserem Auto, als plötzlich etwas in unser Haus einschlug. Wir drehten uns nicht um. Im Rückspiegel sah ich, wie da wo zuvor noch unsere Wohnung war, nun ein schwarzes Loch klaffte. Wir fuhren so schnell wir konnten. Auf dem Weg zum Bahnhof in der große Stadt."
 		},
 		{
 			"emit_signal": "EndDialog",

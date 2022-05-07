@@ -1,6 +1,53 @@
 {
 	"events": [
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Am Straßenrand lag ein Auto auf dem Dach. Wir führen langsam dran vorbei und hielten an. Ein Mann lag mit dem Gesicht nach unten im Gras. \nSeine Brieftische lag neben ihm. Es war nicht zu übersehen, dass da noch Geld drin war."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
 
+			],
+			"portrait": "",
+			"question": "Nehmt ihr das Geld?"
+		},
+		{
+			"choice": "Ja ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1651921238-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "25"
+		},
+		{
+			"choice": "Nein",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
