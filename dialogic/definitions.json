@@ -4,16 +4,16 @@
 	],
 	"variables": [
 		{
-			"id": "1651921238-648",
-			"name": "geld",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1651946541-648",
 			"name": "JungeFrau",
 			"type": 0,
 			"value": ""
+		},
+		{
+			"id": "1651921238-648",
+			"name": "geld",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }
