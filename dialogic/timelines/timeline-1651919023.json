@@ -65,7 +65,7 @@
 			"text": "Wir schraken immer wieder hoch, blieben aber am Küchentisch sitzen. Dann passierte nichts. Ich hielt den Atem an. Eine Ewigkeit in Stille verging. Ich hörte mein Herz so laut schlagen. Plötzlich eine Kraft die mich vom Stuhl riss und ich sah  das geborstene Glas in tausend Splitter durch die Luft  fliegen..."
 		},
 		{
-			"change_scene": "res://GameOver.tscn",
+			"change_scene": "res://Dead.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
