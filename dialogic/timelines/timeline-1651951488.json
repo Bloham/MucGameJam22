@@ -1,6 +1,135 @@
 {
 	"events": [
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Am Bahnhof herrschte Chaos. Viele  hundert Menschen drängten sich nervös um den Platz vor der Haupthalle und versuchten einen der Züge aus der Stadt zu bekommen. Der Eingang zur Halle wurde vom Sicherheitspersonal versperrt, die scheinbar nur sehr schleppend Menschen durch ließen.\nAls wir es nach einer Ewigkeit endlich geschafft hatten uns bis zum Eingang durchzukämpfen, winkte uns einer der Wachleute zu sich. \n\"Pässe!\", wir gaben sie ihm.\"Nur Frauen und Kinder.\" er sah uns nicht ein mal an.\n\"Und mein Mann?\" fragte ich.\n\"Bleibt hier\"\n\"Es sei denn...\" er schürzte die Lippen als er das sagte.\n\"Wie viel?\" fragte mein Mann. \n\"150\" jetzt sah er uns zum ersten mal an."
+		},
+		{
+			"condition": ">=",
+			"definition": "1651921238-648",
+			"event_id": "dialogic_012",
+			"value": "150"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
 
+			],
+			"portrait": "",
+			"question": "Gebt ihr ihm das Geld?"
+		},
+		{
+			"choice": "Natürlich",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir gaben ihm das Geld und er ließ uns ohne zu zögern durch. \nAls der Zug losfuhr glaubte ich in der Ferne Detonationen zu hören.\nWir waren in Sicherheit."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 2
+		},
+		{
+			"choice": "Auf gar keinen Fall",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir blieben noch ein paar Tage in der Großen Stadt, bevor mein Mann eingezogen wurde. Anschließend verbrachten meine Tochter und ich,  sehr viel Zeit in Bunkern und Luftschutzräumen.. \nSpäter erfuhr ich, dass er bei einem Angriff starb. \nMeine Tochter und ich überlebten."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 2
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_scene": "res://GameOver.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "<",
+			"definition": "1651921238-648",
+			"event_id": "dialogic_012",
+			"value": "150"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"So viel haben wir nicht\" \nEr winkte schon die nächste Familie zu sich. \"Dann bleibt hier oder verabschiedet euch voneinander\" "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Soll dein Mann zurückbleiben?"
+		},
+		{
+			"choice": "Ja",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Um unsere Tochter in Sicherheit zu bringen, beschlossen wir uns zu trennen. \nEs war nur sehr wenig Zeit um sich zu verabschieden. \nViel zu wenig.\nDer Zug fuhr ab. \nWir sehen uns nie wieder."
+		},
+		{
+			"change_scene": "res://GameOver.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Nein",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir treiben das Geld schon irgendwie auf."
+		},
+		{
+			"emit_signal": "ContinueDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
