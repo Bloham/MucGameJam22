@@ -11,8 +11,13 @@ var _velocity := Vector2.ZERO
 var dialogIsPlaying = false
 
 onready var animated_sprite: AnimatedSprite = $AnimatedSprite
+var lines : Node
 
 
+
+
+func _ready():
+	lines = get_tree().get_root().get_node("Main/Spielwelt/WorldMap/Weglinien/AktiveWeglinien")
 
 
 func _physics_process(_delta: float) -> void:
@@ -38,8 +43,23 @@ func _physics_process(_delta: float) -> void:
 
 func get_path_direction(direction_input):
 	var diretion_final = direction_input
-	
+	var i = 1
+	for line in lines.get_children():
+		var d = get_distance_point_to_lineSegment(self.get_position(), line.get_point_position(0), line.get_point_position(1))
+#		print ("line ",i,", distance: ",d)
+		i+=1
 	return diretion_final
+
+
+func get_distance_point_to_lineSegment(var p : Vector2, var line_start : Vector2, line_end : Vector2):
+	var l2 =line_start.distance_to(line_end)*line_start.distance_to(line_end)
+	if l2 == 0:
+		return p.distance_to(line_start)
+	var t = ((p.x - line_start.x) * (line_end.x - line_start.x) + (p.y - line_start.y) * (line_end.y - line_start.y)) / l2
+	t = max(0, min(1, t))
+	var z : Vector2 = line_end - line_start
+	var p_projection = line_start + t * z
+	return p.distance_to(p_projection) 
 
 
 # The code below updates the character's sprite to look in a specific direction.
