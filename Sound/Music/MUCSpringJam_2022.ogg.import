@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MUCSpringJam_2022.ogg-f9bf4d82b8d951a23edb2136eae12bb6.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/MUCSpringJam_2022.ogg"
+dest_files=[ "res://.import/MUCSpringJam_2022.ogg-f9bf4d82b8d951a23edb2136eae12bb6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
