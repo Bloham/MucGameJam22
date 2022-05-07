@@ -23,7 +23,7 @@ collision_layer = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Karte/Boundaries/StaticBody2D"]
 position = Vector2( 1137.3, 874.59 )
 scale = Vector2( 0.777776, 0.756769 )
-polygon = PoolVector2Array( -707.326, 22.8873, -620.136, -12.5335, -576.542, -21.7974, -531.312, -6.53918, -500.251, 26.7019, -467.554, -41.415, -418.51, -82.8301, -318.816, -131.733, -283.785, -115.891, -271.874, -87.808, -207.62, -178.739, -177.288, -221.023, -117.706, -234.322, -93.1838, -223.424, -46.8644, -230.508, -3.81445, -243.041, 74.9393, -239.025, 93.8564, -204.461, 131.691, -251.266, 190.728, -267.563, 192.907, -63.2124, 191.272, 78.4707, -507.88, 81.1954, -757.46, 77.9258 )
+polygon = PoolVector2Array( -271.874, -87.808, 191.272, 78.4707, -507.88, 81.1954 )
 
 [node name="StoryNodes" type="Node" parent="Karte"]
 
@@ -40,30 +40,139 @@ polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405,
 
 [node name="Weglinien" type="Node" parent="."]
 
-[node name="Line2D" type="Line2D" parent="Weglinien"]
+[node name="AktiveWeglinien" type="Node" parent="Weglinien"]
+
+[node name="Line2D" type="Line2D" parent="Weglinien/AktiveWeglinien"]
 points = PoolVector2Array( 2037, 1809, 2028, 1679, 2022, 1527, 1938, 1408 )
 default_color = Color( 0.4, 0.501961, 1, 1 )
 
-[node name="Line2D2" type="Line2D" parent="Weglinien"]
+[node name="Line2D2" type="Line2D" parent="Weglinien/AktiveWeglinien"]
 points = PoolVector2Array( 2037, 1809, 2087, 1815, 2173, 1731, 2238, 1710, 2292, 1673, 2353, 1703, 2506, 1653 )
 
-[node name="Line2D3" type="Line2D" parent="Weglinien"]
+[node name="Line2D3" type="Line2D" parent="Weglinien/AktiveWeglinien"]
 position = Vector2( 1442.53, 90.2473 )
 scale = Vector2( 0.288344, 0.950549 )
-points = PoolVector2Array( 2054.74, 1808.17, 1968.04, 1878.65, 1739.15, 1945.98, 1541.47, 1963.87, 1257.08, 2007, 1121.83, 1985.96, 1021.26, 2017.52, -553.255, 2021.73, -927.809, 1927.05, -1135.89, 1906.01 )
+points = PoolVector2Array( 1739.15, 1945.98, 1541.47, 1963.87, 1257.08, 2007, 1121.83, 1985.96, 1021.26, 2017.52, -553.255, 2021.73, -927.809, 1927.05, -1135.89, 1906.01 )
 
-[node name="Line2D4" type="Line2D" parent="Weglinien"]
+[node name="Line2D4" type="Line2D" parent="Weglinien/AktiveWeglinien"]
 position = Vector2( 1442.53, 90.2473 )
 scale = Vector2( 0.288344, 0.950549 )
 points = PoolVector2Array( 1732.21, 1943.88, 1316.04, 1862.87, 962.298, 1817.64, 903.34, 1796.6, 806.234, 1787.13, 344.979, 1689.29, -286.213, 1523.07, -282.745, 1497.82, -362.511, 1480.99, -463.085, 1478.88, -1087.34, 1332.65, -1205.26, 1341.07 )
 
-[node name="Line2D5" type="Line2D" parent="Weglinien"]
-points = PoolVector2Array( 1028, 999, 1110, 1026, 1146, 1028, 1193, 1066, 1260, 1075, 1370, 1203, 1389, 1245, 1467, 1269, 1628, 1303, 1646, 1316, 1807, 1342, 1861, 1407, 1937, 1411, 2060, 1376, 2140, 1351, 2202, 1373, 2252, 1421, 2284, 1499, 2343, 1556, 2354, 1578, 2400, 1584, 2501, 1648 )
+[node name="Line2D5" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1945, 1939, 2011, 1884, 2033, 1809 )
 
-[node name="Line2D6" type="Line2D" parent="Weglinien"]
-points = PoolVector2Array( 1110, 1907, 1101, 1650, 1125, 1535, 1109, 1482, 1099, 1367, 1055, 1330, 1108, 1242, 1085, 1198, 1097, 1136, 1085, 1094, 1031, 1051, 1023, 939, 1045, 896, 1027, 861, 1047, 753, 1091, 679, 1088, 606, 1107, 456, 1106, 347, 1090, 221 )
+[node name="Line2D6" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 2507, 1648, 2395, 1580, 2355, 1583, 2351, 1556, 2328, 1547, 2285, 1504, 2255, 1423, 2196, 1367, 2151, 1352, 2080, 1363, 1937, 1405 )
 
-[node name="Line2D7" type="Line2D" parent="Weglinien"]
-points = PoolVector2Array( -2032, -1589, -1984, -1571, -1937, -1582, -1779, -1556, -1677, -1488, -1507, -1485, -1424, -1467, -1290, -1389, -1239, -1377, -1153, -1414, -936, -1410, -881, -1436, -779, -1421, -727, -1394, -684, -1323, -645, -1317, -541, -1233, -439, -1237, -390, -1195, -380, -1140, -347, -1029, -227, -966, -124, -860, 64, -848, 81, -856, 204, -825, 271, -757, 337, -761, 435, -783, 476, -755, 516, -744, 535, -711, 562, -733, 583, -730, 677, -753, 771, -787, 878, -822, 996, -917, 1130, -962, 1177, -961, 1207, -985, 1247, -994, 1270, -1020, 1323, -1037, 1368, -1097, 1372, -1121, 1476, -1156, 1517, -1149, 1562, -1133, 1597, -1141, 1681, -1158 )
+[node name="Line2D8" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1942, 1407, 1869, 1411, 1806, 1352, 1642, 1320, 1397, 1265, 1395, 1232, 1375, 1205, 1379, 1198, 1274, 1075, 1210, 1072, 1148, 1030, 1107, 1032, 1041, 1002, 1001, 1003 )
+
+[node name="Line2D9" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1096, 1363, 1054, 1329, 1109, 1244, 1086, 1194, 1103, 1134, 1086, 1096, 1032, 1054, 1003, 1005 )
+
+[node name="Line2D10" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1006, 997, 1040, 895, 1027, 871, 1047, 752, 1092, 672, 1087, 605, 1110, 390, 1087, 218 )
+
+[node name="Line2D11" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1083, 221, 1045, 237, 966, 224 )
+
+[node name="Line2D12" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 966, 223, 885, 346 )
+
+[node name="Line2D13" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1000, 1001, 901, 902, 866, 902 )
+
+[node name="Line2D14" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 861, 901, 857, 804, 820, 745, 828, 672, 850, 620, 839, 540, 892, 474, 886, 346 )
+
+[node name="Line2D15" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 967, 224, 854, 310, 843, 374, 664, 447, 594, 445, 489, 502 )
+
+[node name="Line2D16" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 490, 502, 315, 627, 236, 661, 214, 691, 124, 728, 82, 800, -156, 880 )
+
+[node name="Line2D17" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 489, 507, 429, 473, 348, 484, 282, 459, 149, 459, 53, 385, 10, 389, -73, 330, -146, 222, -305, 144, -356, 147 )
+
+[node name="Line2D18" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -356, 142, -349, 98, -309, 66, -291, -22, -247, -72, -223, -56, -192, -101, -190, -149, -174, -187, -153, -205, -154, -255, -147, -278 )
+
+[node name="Line2D19" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 277, -420, 309, -436, 330, -471, 380, -534, 419, -532, 450, -553, 473, -647, 492, -686, 557, -731 )
+
+[node name="Line2D7" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 760, -784, 883, -821, 1006, -921, 1140, -966, 1185, -962, 1208, -993, 1251, -996, 1275, -1020, 1327, -1041, 1370, -1097, 1368, -1121, 1476, -1160, 1515, -1144 )
+
+[node name="Line2D20" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1515, -1145, 1576, -1134, 1669, -1161 )
+
+[node name="Line2D21" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1515, -1143, 1496, -1091, 1489, -1009, 1448, -942, 1378, -921, 1356, -883, 1314, -864, 1188, -754, 1186, -645, 1203, -576, 1190, -474 )
+
+[node name="Line2D22" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1086, 216, 1037, 181, 1060, 106, 1049, 39 )
+
+[node name="Line2D23" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 964, 222, 980, 174, 1033, 89, 1047, 41 )
+
+[node name="Line2D24" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1047, 35, 1120, -50, 1119, -75, 1147, -126, 1136, -185, 1147, -209, 1144, -231, 1168, -272, 1205, -384, 1200, -438, 1185, -473 )
+
+[node name="Line2D25" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 1190, -471, 1156, -567, 1098, -576, 984, -613, 823, -702, 762, -786 )
+
+[node name="Line2D26" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 763, -783, 602, -730, 558, -731 )
+
+[node name="Line2D27" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 558, -734, 477, -752, 435, -784, 342, -758, 281, -754, 196, -835, 84, -857, 61, -847, -12, -846, -123, -861, -211, -937, -231, -971, -350, -1033, -389, -1177 )
+
+[node name="Line2D28" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( 557, -735, 561, -789, 585, -832, 564, -959, 586, -997, 611, -1112, 599, -1137, 467, -1127, 414, -1139, 333, -1139, 242, -1129, 212, -1140, 170, -1190, -4, -1145, -43, -1169, -177, -1145, -244, -1168, -385, -1175 )
+
+[node name="Line2D29" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -387, -1173, -435, -1233, -521, -1227, -635, -1311, -675, -1325, -735, -1399, -775, -1422, -877, -1435, -929, -1411, -1152, -1418, -1242, -1372, -1291, -1385, -1425, -1465, -1512, -1482, -1677, -1490, -1767, -1540, -1928, -1581, -2001, -1581, -2028, -1620 )
+
+[node name="Line2D30" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -2033, -1615, -2080, -1541, -2152, -1445, -2181, -1427, -2226, -1362, -2215, -1265, -2228, -1241, -2227, -1209, -2255, -1136, -2247, -1100, -2265, -1019, -2239, -962 )
+
+[node name="Line2D31" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -2238, -960, -2149, -949, -2080, -1002, -2060, -993, -1934, -1013, -1832, -1038, -1741, -1082, -1670, -1074 )
+
+[node name="Line2D32" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -1678, -1078, -1581, -1013, -1473, -967, -1424, -933, -1375, -998, -1215, -1004 )
+
+[node name="Line2D33" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -1217, -1004, -1394, -1234, -1424, -1226, -1461, -1251, -1508, -1267, -1552, -1312, -1692, -1432, -1802, -1432, -1831, -1457, -1816, -1511, -1876, -1510, -1906, -1551, -2025, -1616 )
+
+[node name="Line2D34" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -1214, -999, -1162, -931, -1150, -904, -997, -825 )
+
+[node name="Line2D35" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -988, -825, -877, -856, -857, -837, -740, -895, -704, -929, -683, -926, -651, -960, -621, -962, -623, -1004, -577, -1085, -520, -1121, -489, -1102, -435, -1144, -431, -1176, -389, -1176 )
+
+[node name="Line2D36" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -994, -825, -945, -808, -857, -700, -761, -678, -712, -651, -606, -655, -571, -678, -520, -677, -474, -638, -375, -444, -334, -416, -328, -393, -267, -361, -181, -326, -151, -285 )
+
+[node name="Line2D37" type="Line2D" parent="Weglinien/AktiveWeglinien"]
+points = PoolVector2Array( -150, -283, -104, -298, -90, -286, -60, -286, -50, -305, 45, -325, 104, -371, 156, -372, 279, -420 )
+
+[node name="InaktiveWeglinien" type="Node" parent="Weglinien"]
+
+[node name="Line2D" type="Line2D" parent="Weglinien/InaktiveWeglinien"]
+points = PoolVector2Array( 1114, 1906, 1024, 1995, 999, 2053, 956, 2104 )
+default_color = Color( 1, 0, 0.351563, 1 )
+
+[node name="Line2D2" type="Line2D" parent="Weglinien/InaktiveWeglinien"]
+points = PoolVector2Array( 1114, 1903, 939, 1932, 911, 1948, 686, 1962, 647, 1937, 411, 1970, 374, 1965, 347, 1953, 34, 2004, 23, 2018, -292, 2076, -334, 2067, -349, 2036, -423, 2050, -478, 2110 )
+default_color = Color( 1, 0, 0.352941, 1 )
+
+[node name="Line2D3" type="Line2D" parent="Weglinien/InaktiveWeglinien"]
+points = PoolVector2Array( 1112, 1903, 1100, 1682, 1121, 1534, 1100, 1371 )
+
+[node name="Line2D4" type="Line2D" parent="Weglinien/InaktiveWeglinien"]
+points = PoolVector2Array( 2509, 1653, 2539, 1655, 2605, 1631, 2687, 1662, 2741, 1643, 2805, 1661, 2853, 1630, 2916, 1609, 3002, 1598 )
+default_color = Color( 1, 0, 0.352941, 1 )
 
 [connection signal="body_entered" from="Karte/StoryNodes/Intro/Area2D" to="Karte/StoryNodes/Intro" method="_on_Area2D_body_entered"]
