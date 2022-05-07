@@ -23,5 +23,6 @@ func dialog_listener(string):
 		"EndDialog":
 			print("Dialog beendet")
 			player.speed = 150
+			self.queue_free()
 			pass
 

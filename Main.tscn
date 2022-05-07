@@ -13,5 +13,3 @@
 position = Vector2( 506, -388 )
 speed = 150
 friction = 0.1
-
-[node name="UI" type="Node" parent="."]
