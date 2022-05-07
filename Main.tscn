@@ -11,7 +11,12 @@
 [node name="Map" parent="Spielwelt" instance=ExtResource( 1 )]
 
 [node name="Player" parent="Spielwelt" instance=ExtResource( 2 )]
+<<<<<<< HEAD
 position = Vector2( 6117, 7246 )
+=======
+position = Vector2( 4094, 2697 )
+speed = 150
+>>>>>>> origin/main
 friction = 0.1
 
 [node name="Other" type="Node" parent="."]

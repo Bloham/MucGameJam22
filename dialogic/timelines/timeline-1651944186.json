@@ -1,0 +1,127 @@
+{
+	"events": [
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Das Dorf\n\nAnfangs schien es  noch komplett verlassen zu sein, aber dann sahen wir gelegentlich doch jemanden vorsichtig aus dem Fenster schauen. Nicht alle waren geflohen."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Als wir das Dorf auf der Hauptstraße fast passiert hatten, war da plötzlich eine etwas heruntergekommene Frau mitten auf der Straße. Sie  winkte und rannte völlig außer sich auf uns zu. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Haltet ihr an?"
+		},
+		{
+			"choice": "\"Fahr weiter, ich trau der Sache nicht...\"",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir sahen die Frau nicht an als wir um sie rumfuhren. Im Rückspiegel konnte ich sehen wie sie auf ihre Knie sank und ihr Gesicht in die Hände legte."
+		},
+		{
+			"choice": "Wir halten an. ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir wurden langsamer und kurbelten das Fenster runter: \"Bitte helft uns! Mein Sohn ist sehr krank. Er muss ins Hospital  und unser Auto springt nicht an. Bitte kommt schnell - er liegt da drüben in unserem Haus. Bitte helft uns!\""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Helft ihr der Frau?"
+		},
+		{
+			"choice": "Ja, auf jeden Fall!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ich blieb mit meiner Tochter zurück und mein Mann folgte der Frau. Sie gingen auf das Haus zu. Plötzlich blieb er stehen und sah sich das Auto an, dass in der Einfahrt stand. Er sagte irgendwas zu der Frau ohne sie anzusehen und öffnete die Motorhaube. ...\nDer Wagen sprang an. Sie trugen einen gelblich blassen und scheinbar sehr schwächlichen Jungen aus dem Haus und setzten ihn ins Auto. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Hier, nehmt das. Ist nicht viel. Danke!\" Sagte die Frau und drückte meinem Mann ein paar Scheine in die Hand."
+		},
+		{
+			"definition": "1651921238-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "50"
+		},
+		{
+			"definition": "1651946541-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"choice": "\"Tut uns leid. Wir können nicht helfen.\"",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir verließen das Dorf. Hier konnten wir nicht bleiben. Der Krieg kam näher..."
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651944186.json",
+		"name": "Dorf"
+	}
+}

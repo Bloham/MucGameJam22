@@ -1,0 +1,17 @@
+{
+	"events": [
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651948446.json",
+		"name": "StadtTankstelle"
+	}
+}
