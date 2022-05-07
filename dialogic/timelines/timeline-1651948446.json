@@ -1,17 +1,57 @@
 {
 	"events": [
 		{
-			"emit_signal": "",
+			"emit_signal": "StartDialog",
 			"event_id": "dialogic_040"
 		},
 		{
-			"emit_signal": "",
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wir hatten zwar noch genug Benzin im Tank und einen vollen Kanister im Kofferraum, aber wir wollten unsere Wasserflaschen an der Tankstelle auffüllen. \nAuf der Toilette sprach ich mit einer Frau. Sie fragte ob wir ihnen etwas von unserem Benzin verkaufen könnten. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Verkauft ihr einen Teil eures Benzins?"
+		},
+		{
+			"choice": "Ja. Wir sind ja bald beim Bahnhof.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1651921238-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "100"
+		},
+		{
+			"choice": "Lieber nicht! ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "EndDialog",
 			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
 		"file": "timeline-1651948446.json",
-		"name": "StadtTankstelle"
+		"name": "Tankstelle"
 	}
 }
