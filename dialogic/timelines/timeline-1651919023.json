@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -77,6 +81,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Wir machen uns auf den weg mit so viel geld:"
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
