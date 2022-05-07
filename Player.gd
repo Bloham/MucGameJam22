@@ -1,13 +1,14 @@
 extends KinematicBody2D
 
 # Movement speed in pixels per second.
-export var speed := 500
+export var speed := 150
 export var friction = 0.18
 
 # We map a direction to a frame index of our AnimatedSprite node's sprite frames.
 # See how we use it below to update the character's look direction in the game.
 var _sprites := {Vector2.RIGHT: 1, Vector2.LEFT: 2, Vector2.UP: 3, Vector2.DOWN: 4}
 var _velocity := Vector2.ZERO
+var dialogIsPlaying = false
 
 onready var animated_sprite: AnimatedSprite = $AnimatedSprite
 
@@ -52,3 +53,13 @@ func _unhandled_input(event):
 
 func _update_sprite(direction: Vector2) -> void:
 	animated_sprite.frame = _sprites[direction]
+
+#this function stops the player moving when in a dialog
+func dialogPlaying(state):
+	dialogIsPlaying = state
+	if dialogIsPlaying == true:
+		speed = 0
+		print("Current Movement Speed: ", speed)
+	else:
+		speed = 150
+		print("Current Movement Speed: ", speed)

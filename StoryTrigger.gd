@@ -17,12 +17,12 @@ func dialog_listener(string):
 	match string:
 		"StartDialog":
 			print("Dialog gestartet mit ", player)
-			player.speed = 0
+			player.dialogPlaying(true)
 			pass
 		
 		"EndDialog":
 			print("Dialog beendet")
-			player.speed = 150
+			player.dialogPlaying(false)
 			self.queue_free()
 			pass
 

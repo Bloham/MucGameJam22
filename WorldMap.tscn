@@ -6,8 +6,7 @@
 [node name="WorldMap" type="Node2D"]
 
 [node name="Karte" type="Sprite" parent="."]
-position = Vector2( 718, 498 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -22,8 +21,9 @@ scale = Vector2( 1.83508, 1.83508 )
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Karte/Boundaries/StaticBody2D"]
-position = Vector2( 2011.9, 1510.02 )
-polygon = PoolVector2Array( -707.326, 22.8873, -620.136, -12.5335, -576.542, -21.7974, -531.312, -6.53918, -500.251, 26.7019, -467.554, -41.415, -418.51, -82.8301, -307.344, -140.593, -274.103, -124.79, -263.204, -96.4535, -207.62, -178.739, -165.66, -221.244, -117.706, -234.322, -93.1838, -223.424, -46.8644, -230.508, -3.81445, -243.041, 78.4707, -244.131, 111.712, -232.687, 190.728, -267.563, 192.907, -63.2124, 191.272, 78.4707, -507.88, 81.1954, -757.46, 77.9258 )
+position = Vector2( 1137.3, 874.59 )
+scale = Vector2( 0.777776, 0.756769 )
+polygon = PoolVector2Array( -707.326, 22.8873, -620.136, -12.5335, -576.542, -21.7974, -531.312, -6.53918, -500.251, 26.7019, -467.554, -41.415, -418.51, -82.8301, -318.816, -131.733, -283.785, -115.891, -271.874, -87.808, -207.62, -178.739, -177.288, -221.023, -117.706, -234.322, -93.1838, -223.424, -46.8644, -230.508, -3.81445, -243.041, 74.9393, -239.025, 93.8564, -204.461, 131.691, -251.266, 190.728, -267.563, 192.907, -63.2124, 191.272, 78.4707, -507.88, 81.1954, -757.46, 77.9258 )
 
 [node name="StoryNodes" type="Node" parent="Karte"]
 
@@ -35,7 +35,7 @@ position = Vector2( 2051, 1407 )
 collision_layer = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Karte/StoryNodes/Intro/Area2D"]
-position = Vector2( 1549, 1233 )
-polygon = PoolVector2Array( 506, 171, 581, 113, 602, 61, 587, 15, 498, -46, 405, 13, 418, 86 )
+position = Vector2( -33, 169 )
+polygon = PoolVector2Array( 506, 171, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
 
 [connection signal="body_entered" from="Karte/StoryNodes/Intro/Area2D" to="Karte/StoryNodes/Intro" method="_on_Area2D_body_entered"]
