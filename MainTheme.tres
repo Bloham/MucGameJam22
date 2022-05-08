@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=11 format=2]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/OpenSans-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 29
+use_filter = true
+font_data = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0.545098 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Assets/OpenSans-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 18
+outline_size = 1
+outline_color = Color( 1, 1, 1, 0.27451 )
+use_mipmaps = true
+font_data = SubResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0.392157 )
+
+[resource]
+Button/fonts/font = SubResource( 5 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = SubResource( 7 )
+Button/styles/normal = SubResource( 8 )
+Button/styles/pressed = SubResource( 9 )
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/fonts/font = SubResource( 11 )
+Panel/styles/panel = SubResource( 12 )
+PanelContainer/styles/panel = SubResource( 3 )

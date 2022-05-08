@@ -81,7 +81,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MunichGameJam22"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://StartMenue.tscn"
 config/icon="res://icon.png"
 
 [display]

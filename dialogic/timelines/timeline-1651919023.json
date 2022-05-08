@@ -39,6 +39,10 @@
 			"text": "Wir rannten so schnell wir konnten. Ein endloses Stockwerk nach dem anderen. Unsere Tochter die noch zu klein war auf dem Arm meines Mannes. Eine niemals enden wollenden Stiege nach der anderen."
 		},
 		{
+			"emit_signal": "UpdateGeld",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Schnell zum Fahrstuhl!!!",
 			"condition": "",
 			"definition": "",

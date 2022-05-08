@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://WorldMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sound/Music/MUCSpringJam_2022.ogg" type="AudioStream" id=3]
 [ext_resource path="res://StoryTrigger.gd" type="Script" id=4]
+[ext_resource path="res://InGameUI.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
 
@@ -20,17 +21,81 @@ position = Vector2( 1011, 1018 )
 stream = ExtResource( 3 )
 autoplay = true
 
+[node name="UI" type="CanvasLayer" parent="Sonstiges"]
+
+[node name="InGameUI" parent="Sonstiges/UI" instance=ExtResource( 5 )]
+
 [node name="StoryNodes" type="Node" parent="."]
 
 [node name="Intro" type="Node" parent="StoryNodes"]
 script = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="StoryNodes/Intro"]
-position = Vector2( 2051, 1407 )
+position = Vector2( 995, 1000 )
 collision_layer = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/Intro/Area2D"]
-position = Vector2( -33, 169 )
+position = Vector2( -497, -42 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="Dorf" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/Dorf"]
+position = Vector2( -355, 139 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/Dorf/Area2D"]
+position = Vector2( -507, -50 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="StadtKontrolle" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/StadtKontrolle"]
+position = Vector2( -913, 301 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/StadtKontrolle/Area2D"]
+position = Vector2( -503, -62 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="StadtBahnhof" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/StadtBahnhof"]
+position = Vector2( -2029, -1618 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/StadtBahnhof/Area2D"]
+position = Vector2( -503, -62 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="Tankstelle" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/Tankstelle"]
+position = Vector2( 554, -749 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/Tankstelle/Area2D"]
+position = Vector2( -503, -62 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="Autounfall" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/Autounfall"]
+position = Vector2( 276, -418 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/Autounfall/Area2D"]
+position = Vector2( -503, -62 )
 polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
 
 [connection signal="body_entered" from="StoryNodes/Intro/Area2D" to="StoryNodes/Intro" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/Dorf/Area2D" to="StoryNodes/Dorf" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/StadtKontrolle/Area2D" to="StoryNodes/StadtKontrolle" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/StadtBahnhof/Area2D" to="StoryNodes/StadtBahnhof" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/Tankstelle/Area2D" to="StoryNodes/Tankstelle" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/Autounfall/Area2D" to="StoryNodes/Autounfall" method="_on_Area2D_body_entered"]

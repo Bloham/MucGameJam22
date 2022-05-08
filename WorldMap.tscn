@@ -273,6 +273,11 @@ default_color = Color( 1, 0, 0.352941, 1 )
 points = PoolVector2Array( -177, 879, -139, 835, -141, 801, -124, 778, -129, 754, -57, 699, -45, 661, -66, 645, -64, 629, -93, 586, -120, 582, -132, 556, -120, 465 )
 default_color = Color( 1, 0, 0.352941, 1 )
 
+[node name="Line2D62" type="Line2D" parent="Weglinien/InaktiveWeglinien"]
+position = Vector2( 0, -1 )
+points = PoolVector2Array( 172, 1229, 165, 1288, 139, 1308, 136, 1348, 150, 1426, 138, 1469, 120, 1504, 50, 1601, -39, 1741, -102, 1813, -132, 1869, -161, 1899, -213, 1931 )
+default_color = Color( 1, 0, 0.352941, 1 )
+
 [node name="AktiveWeglinien" type="Node" parent="Weglinien"]
 
 [node name="Line2D4" type="Line2D" parent="Weglinien/AktiveWeglinien"]

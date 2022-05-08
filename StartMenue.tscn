@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://WorldMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://CameraMovingOverMap.gd" type="Script" id=2]
+[ext_resource path="res://MainMenue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sound/Music/MUCSpringJam_2022.ogg" type="AudioStream" id=4]
+
+[sub_resource type="Curve2D" id=1]
+bake_interval = 20.0
+_data = {
+"points": PoolVector2Array( -178.27, 85.2108, 178.27, -85.2108, 916, 1096, -112.12, 153.604, 112.12, -153.604, 1171, 374, 68.3929, 423.812, -68.3929, -423.812, 1497, -367, 0, 0, 0, 0, 1035, -822, 346.449, 19.0603, -346.449, -19.0603, 21, -1078, 302.723, -6.72717, -302.723, 6.72717, -751, -833, 199.573, 121.089, -199.573, -121.089, -1471, -1320, 73.9989, -36.9994, -73.9989, 36.9994, -1873, -1326, -6.72717, -193.967, 6.72717, 193.967, -2114, -1013, -153.604, -173.785, 153.604, 173.785, -1934, -335, -304.965, -17.9391, 304.965, 17.9391, -1179, 58, -140.149, -57.181, 140.149, 57.181, -419, 26, -24.6663, -89.6956, 24.6663, 89.6956, -158, 295, -176.028, -190.603, 176.028, 190.603, -194, 1081, -114.362, 16.8179, 114.362, -16.8179, 269, 1269, 0, 0, 0, 0, 916, 1097 )
+}
+
+[node name="Main" type="Node"]
+
+[node name="Spielwelt" type="Node" parent="."]
+
+[node name="WorldMap" parent="Spielwelt" instance=ExtResource( 1 )]
+
+[node name="Sonstiges" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sonstiges"]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="UI" type="CanvasLayer" parent="Sonstiges"]
+
+[node name="MainMenue" parent="Sonstiges/UI" instance=ExtResource( 3 )]
+
+[node name="CameraMovingOverMap" type="Path2D" parent="Sonstiges"]
+position = Vector2( -19, 15 )
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+speed = 60
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Sonstiges/CameraMovingOverMap"]
+position = Vector2( 916, 1096 )
+rotation = -0.504626
+
+[node name="Camera2D" type="Camera2D" parent="Sonstiges/CameraMovingOverMap/PathFollow2D"]
+current = true
+zoom = Vector2( 2, 2 )
