@@ -96,6 +96,10 @@
 			"set_value": "true"
 		},
 		{
+			"emit_signal": "UpdateGeld",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "\"Tut uns leid. Wir können nicht helfen.\"",
 			"condition": "",
 			"definition": "",

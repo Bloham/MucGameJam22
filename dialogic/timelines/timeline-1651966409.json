@@ -1,7 +1,7 @@
 {
 	"events": [
 		{
-			"emit_signal": "",
+			"emit_signal": "StartDialog",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -41,6 +41,10 @@
 			"set_value": "50"
 		},
 		{
+			"emit_signal": "UpdateGeld",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Nein.",
 			"condition": "",
 			"definition": "",
@@ -51,7 +55,7 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"emit_signal": "",
+			"emit_signal": "EndDialog",
 			"event_id": "dialogic_040"
 		}
 	],

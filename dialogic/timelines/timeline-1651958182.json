@@ -35,6 +35,10 @@
 			"set_value": "25"
 		},
 		{
+			"emit_signal": "UpdateGeld",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Nein",
 			"condition": "",
 			"definition": "",

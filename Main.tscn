@@ -93,9 +93,57 @@ collision_layer = 4
 position = Vector2( -503, -62 )
 polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
 
+[node name="KleinstadtWasser" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/KleinstadtWasser"]
+position = Vector2( -1057, -590 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/KleinstadtWasser/Area2D"]
+position = Vector2( -496, -57 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="small_encounter_1" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/small_encounter_1"]
+position = Vector2( -1225, -1000 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/small_encounter_1/Area2D"]
+position = Vector2( -496, -57 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="small_encounter_2" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/small_encounter_2"]
+position = Vector2( 1482, -1171 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/small_encounter_2/Area2D"]
+position = Vector2( -496, -57 )
+polygon = PoolVector2Array( 498, 145, 581, 113, 602, 61, 587, 15, 504, -41, 405, 13, 418, 86 )
+
+[node name="small_encounter_3" type="Node" parent="StoryNodes"]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StoryNodes/small_encounter_3"]
+position = Vector2( 857, 360 )
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoryNodes/small_encounter_3/Area2D"]
+position = Vector2( -544, -32 )
+polygon = PoolVector2Array( 433, 192, 665, 229, 890, 104, 873, -221, 625, -312, 379, -154, 290, 54 )
+
 [connection signal="body_entered" from="StoryNodes/Intro/Area2D" to="StoryNodes/Intro" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="StoryNodes/Dorf/Area2D" to="StoryNodes/Dorf" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="StoryNodes/StadtKontrolle/Area2D" to="StoryNodes/StadtKontrolle" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="StoryNodes/StadtBahnhof/Area2D" to="StoryNodes/StadtBahnhof" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="StoryNodes/Tankstelle/Area2D" to="StoryNodes/Tankstelle" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="StoryNodes/Autounfall/Area2D" to="StoryNodes/Autounfall" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/KleinstadtWasser/Area2D" to="StoryNodes/KleinstadtWasser" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/small_encounter_1/Area2D" to="StoryNodes/small_encounter_1" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/small_encounter_2/Area2D" to="StoryNodes/small_encounter_2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="StoryNodes/small_encounter_3/Area2D" to="StoryNodes/small_encounter_3" method="_on_Area2D_body_entered"]
