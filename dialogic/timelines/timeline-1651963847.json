@@ -1,6 +1,19 @@
 {
 	"events": [
-
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Auf der Straße vor uns standen einige ausgebrannte Autos. Daneben ein zerstörter Panzer. \nVorsichtig umfuhren ihn."
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",

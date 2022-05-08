@@ -32,7 +32,7 @@
 			"operation": "+",
 			"random_upper_limit": 100,
 			"set_random": false,
-			"set_value": "100"
+			"set_value": "75"
 		},
 		{
 			"choice": "Lieber nicht! ",

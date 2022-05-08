@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Meine Tante wohnte immer schon in der kleinen Stadt am Wasser. Als Kinder waren wir oft hier. Als wir durch die Straßen fuhren sah man kurz die Promenade. Da wo sich vor ein paar Tagen noch Menschenmassen tummelten, sah man heute nicht eine Seele. \nWir kamen am Haus meiner Tante vorbei."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Möchtest du nach ihr sehen?"
+		},
+		{
+			"choice": "Ja.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ich ging in den zweiten Stock des Mehrfamilienhauses und klopfte an. \nMeine Tante war wohlauf. Ich versuchte sie zu überzogen uns doch zu begleiten, aber sie wollte auf keinen Fall die kleine Stadt am Wasser verlassen. Ich probierte es noch einige male vehement, aber ohne Erfolg.\nSie blieb. Beim Abschied drückte sie mir noch etwas Geld in die Hand. So wie damals, als ich ein Kind war."
+		},
+		{
+			"definition": "1651921238-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "50"
+		},
+		{
+			"choice": "Nein.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651966409.json",
+		"name": "KleinstadtWasser"
+	}
+}

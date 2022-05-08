@@ -1,6 +1,19 @@
 {
 	"events": [
-
+		{
+			"emit_signal": "StartDialog",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ausgestorben"
+		},
+		{
+			"emit_signal": "EndDialog",
+			"event_id": "dialogic_040"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
