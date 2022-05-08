@@ -4,12 +4,13 @@ extends Control
 
 onready var geldText = $Panel/VBoxContainer/HBoxContainer/Geld
 
-var geld = 0
+export var startGeld = 0
 
 func _ready():
-	change_geld(geld)
+	change_geld(startGeld)
 
 #Diese funktion wird aus StoryTrigger getriggert wenn das Signal emittet wird, das sich das Geld verändert hat.
 func change_geld(new_geld):
-	geldText.text = str(geld)
+	print("Geld wird upgedated...", new_geld)
+	geldText.text = str(new_geld)
 	
