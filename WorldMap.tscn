@@ -280,12 +280,6 @@ default_color = Color( 1, 0, 0.352941, 1 )
 
 [node name="AktiveWeglinien" type="Node" parent="Weglinien"]
 
-[node name="Line2D4" type="Line2D" parent="Weglinien/AktiveWeglinien"]
-position = Vector2( 1442.53, 90.2473 )
-scale = Vector2( 0.288344, 0.950549 )
-points = PoolVector2Array( 1732.21, 1943.88, 1316.04, 1862.87, 962.298, 1817.64, 903.34, 1796.6, 806.234, 1787.13, 344.979, 1689.29, -286.213, 1523.07, -282.745, 1497.82, -362.511, 1480.99, -463.085, 1478.88, -1087.34, 1332.65, -1205.26, 1341.07 )
-default_color = Color( 1, 0, 0.352941, 1 )
-
 [node name="Line2D10" type="Line2D" parent="Weglinien/AktiveWeglinien"]
 points = PoolVector2Array( 1006, 997, 1040, 895, 1027, 871, 1047, 752, 1092, 672, 1087, 605, 1110, 390, 1087, 218 )
 

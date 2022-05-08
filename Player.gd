@@ -12,12 +12,18 @@ var dialogIsPlaying = false
 
 onready var animated_sprite: AnimatedSprite = $AnimatedSprite
 var lines : Node
+var mark : Node2D
+var mark1 : Node2D
+var mark2 : Node2D
 
 
 
 
 func _ready():
 	lines = get_tree().get_root().get_node("Main/Spielwelt/WorldMap/Weglinien/AktiveWeglinien")
+#	mark = get_tree().get_root().get_node("Main/Spielwelt/mark")
+#	mark1 = get_tree().get_root().get_node("Main/Spielwelt/mark0")
+#	mark2 = get_tree().get_root().get_node("Main/Spielwelt/mark1")
 
 
 func _physics_process(_delta: float) -> void:
@@ -41,13 +47,13 @@ func _physics_process(_delta: float) -> void:
 	#move_and_slide(speed * direction)
 
 
-var distance_to_path_max = 250.0
+var distance_to_path_max = 25.0
 func get_path_direction(direction_input):
 	var diretion_final = direction_input
 	var intended = self.get_position() + direction_input
-	var distance_min = 999
+	var distance_min = 999999
 	var minimizing_line : Line2D
-	var minimizing_point = 999
+	var minimizing_point = -1
 	
 	for line in lines.get_children():
 		var line_index = 0
@@ -60,31 +66,37 @@ func get_path_direction(direction_input):
 				minimizing_line = line
 				minimizing_point = line_index
 			line_index += 1
-	
-	if distance_min > distance_to_path_max and distance_min < 999:
-		print (" player oob by ",(distance_min - distance_to_path_max))
-#		var line_start = minimizing_line.get_point_position(minimizing_point)
-#		var line_end = minimizing_line.get_point_position(minimizing_point+1)
-#		var intended_projected = get_point_projected_on_lineSegment(intended, line_start, line_end)
-#		var d_diff = intended - intended_projected
-#		var d_adjusted = d_diff.normalized() 
-#		diretion_final = self.get_position() + d_adjusted
+			
+	if distance_min > distance_to_path_max and minimizing_point > -1:
+		var line_start = minimizing_line.get_point_position(minimizing_point)
+		var line_end = minimizing_line.get_point_position(minimizing_point+1)
+		var pos_projected = get_point_projected_on_lineSegment(self.get_position(), line_start, line_end)
+		var d_diff = pos_projected - self.get_position()
+		var d_adjusted = d_diff.normalized()
+#		mark1.set_position(line_start)
+#		mark2.set_position(line_end)
+#		mark.set_position(intended_projected)
+		print (" player dist to ",minimizing_line.name," node ",minimizing_point," is ",(distance_min - distance_to_path_max))
+		diretion_final = d_adjusted
 		
 	return diretion_final
 
 
 func get_distance_point_to_lineSegment(var p : Vector2, var line_start : Vector2, line_end : Vector2):
-	var p_projection = get_point_projected_on_lineSegment(p, line_start, line_end)
-	return p.distance_to(p_projection) 
+	return p.distance_to(get_point_projected_on_lineSegment(p, line_start, line_end))
 
 
 func get_point_projected_on_lineSegment(var p : Vector2, var line_start : Vector2, line_end : Vector2):
-	var l2 =line_start.distance_to(line_end)*line_start.distance_to(line_end)
+	var l1 : float = line_start.distance_to(line_end)
+	var l2 : float = l1*l1
 	if l2 == 0:
 		return p.distance_to(line_start)
-	var t = ((p.x - line_start.x) * (line_end.x - line_start.x) + (p.y - line_start.y) * (line_end.y - line_start.y)) / l2
-	t = max(0, min(1, t))
-	return line_start + t * line_end - line_start
+		
+	var t = (p - line_start).dot(line_end - line_start)
+	t = max(0.0, min(1.0, t/l2))
+	return line_start + t * (line_end - line_start)
+
+	return line_start + t * (line_end - line_start)
 
 
 # The code below updates the character's sprite to look in a specific direction.
